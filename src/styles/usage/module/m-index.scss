@@ -1,0 +1,634 @@
+body > div,body > section {
+  height: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  background-color: #fff;
+}
+.index-container {
+  @include flex(1);
+  width: 100%;
+  overflow: hidden;
+}
+
+footer {
+  height: 50px;
+  background: #fff;
+  ul {
+    width: 100%;
+    height: 100%;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    border-top: solid 0.5px #d9d9d9;
+    li {
+      @include flex(1);
+      @include flexbox();
+      @include flex-direction(column);
+      @include align-items(center);
+      @include justify-content(center);
+      &.active b,
+      &.active i {
+        color: $baseColor;
+      }
+      b, i {
+        font-size: 12px;
+        color: #999;
+      }
+      i {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 26px;
+      }
+      b {
+        font-weight: normal;
+        line-height: 20px;
+      }
+      &:nth-child(3) {
+        i {
+          position: relative;
+          z-index: 99;
+          background: #fff;
+          width: 60px;
+          border-radius: 50%;
+          top: -15px;
+          text-align: center;
+          line-height: 60px;
+          font-size: 36px;
+          &::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+.main-container {
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+
+    > * {
+        width: 100%;
+
+    }
+
+    header {
+        height: 0.44rem;
+        padding: 0.08rem 0.2rem;
+        *{
+          height: 100%;
+        }
+        .searchleft{
+          width: 80%;
+          border: 1px solid #efefef;
+          border-radius: 5px;
+          float: left;
+          background-color: #fafafa;
+          span{
+            width: 20%;
+          }
+          input{
+            width: 80%;
+            border: 0;
+            background-color: #fafafa;
+          }
+
+        }
+        .searchright{
+          width: 15%;
+          float: right;
+        }
+    }
+
+    #wrapper{
+        height: 0.35rem;
+        width: 100%;
+        margin-bottom: 2px;
+        ul {
+            width: 600px;
+            height: 100%;
+            @include flexbox();
+            background: #fff;
+               border-bottom: 1px solid #efefef;
+            li {
+                @include flex(1);
+                @include border(0 0 1px 0, #d9d9d9);
+                margin: 0 0.07rem;
+                font-size: 0.14rem;
+                text-align: center;
+                line-height: 0.35rem;
+
+                &.active {
+                    border-bottom: solid 0.02rem $baseColor;
+                    color: $baseColor;
+                }
+            }
+        }
+    }
+
+    > section {
+        @include flex(1);
+        overflow: hidden;
+        width: 100%;
+
+        .swiper-container {
+            height: 100%;
+
+            .swiper-wrapper {
+              height: 100%;
+              .swiper-slide {
+                height: 100%;
+
+              }
+            }
+
+           section {
+             .oldprice{
+               text-decoration: line-through;
+             }
+             .newprice{
+               color: $baseColor;
+             }
+                height: 100%;
+                overflow: hidden;
+                .headzkf {
+                    text-align: center;
+                    height: 0.35rem;
+                    line-height: 0.35rem;
+                }
+                .headzkf img {
+                    width: 0.16rem;
+                    display: inline-block;
+                    transform: rotate(180deg);
+                    -webkit-transform: rotate(180deg);
+                    transition: transform 150ms;
+                    -webkit-transition: transform 150ms;
+                }
+                .up {
+                    transform: rotate(360deg) !important;
+                    -webkit-transform: rotate(360deg) !important;
+                }
+                .footzkf {
+                    text-align: center;
+                    height: 0.35rem;
+                    line-height: 0.35rem;
+                }
+                .footzkf img {
+                    display: inline-block;
+                    width: 0.16rem;
+                    /*transform: rotate(0deg);*/
+                    /*-webkit-transform: rotate(0deg);*/
+                    transition: transform 150ms;
+                    -webkit-transition: transform 150ms;
+                }
+                .down {
+                    transform: rotate(180deg) !important;
+                    -webkit-transform: rotate(180deg) !important;
+                }
+                .bodybox{
+                  .swiper-wrapper{
+                    height: 2rem;
+
+                    .swiper-wrapper {
+                      height: 100%;
+                        width: 100%;
+                      .swiper-slide {
+                        height: 100%;
+                        width: 100%;
+
+                      }
+                    }
+                  }
+                   #styleul{
+                     width: 100%;
+                     height: 100%;
+                     li{
+                       width: 100%;
+                       height: 100%;
+                       overflow: hidden;
+                       img{
+                         width: 100%;
+                       }
+                     }
+                   }
+                  .bannernav{
+                    // height: 1.5rem;
+
+                    ul{
+                      // height: 1.5rem;
+                      // overflow: hidden;
+                      li{
+                        height:0.75rem;
+                        width: 25%;
+                        float: left;
+                        padding: 0.1rem 0.1rem;
+                        overflow: hidden;
+                        text-align: center;
+                        img{
+                          width: 50%;
+                        }
+                        span{
+                          display: block;
+                        }
+
+                      }
+
+                    }
+                  }
+                  .sec1{
+                    border-bottom: 1px solid #efefef;
+                    .headshop{
+                      width: 100%;
+                      height: .9rem;
+                      overflow: hidden;
+                      background-color: #efefef;
+                         img{
+                           width: 100%;
+                         }
+                    }
+                    .shops1{
+                       height: 2.7rem;
+                       .shop1head{
+                         height: 0.4rem;
+                       }
+                       ul{
+                         height: 2.3rem;
+                         li{
+                           overflow: hidden;
+                           width: 30%;
+                           height: 48%;
+                           float: left;
+                           margin: 0 0 1% 0.5%;
+                           img{
+                             width: 100%;
+                           }
+                           &:nth-child(1){
+                             width: 39%;
+                             height: 98%;
+                             margin: 0;
+                           }
+                         }
+                       }
+                    }
+                  }
+                  .sec2{
+                    div{
+                       text-align: center;
+                      border-bottom: 1px solid #efefef;
+                      img{
+
+                        height: 1.5rem;
+                        overflow: hidden;
+                      }
+                      p{
+                        text-align: left;
+                        width: 100%;
+                        padding:.1rem 0.2rem;
+                        line-height: 0.2rem;
+                      }
+                      .xqbottom{
+                        text-align: left;
+                        padding: 0  .1rem .1rem .1rem;
+                        span{
+                          display: inline-block;
+                          padding: 0 .1rem;
+                          line-height: .4rem;
+                        }
+                        .oldprice{
+                          text-decoration: line-through;
+                        }
+                        .newprice{
+                          color: $baseColor;
+                        }
+                        button{
+                          float: right;
+                          width: .6rem;
+                          height: 0.3rem;
+                          background: none;
+                          border: 1px solid $baseColor;
+                          color: $baseColor;
+                          border-radius: .05rem;
+                        }
+                      }
+                    }
+
+
+                  }
+
+                  .sec3{
+                    >*{
+                        width: 100%;
+                    }
+                    .hide{
+                      display: none;
+                    }
+                    .se3head{
+                        height: .4rem;
+                    }
+                    .sec3box{
+                      .shopsec3head{
+                        height: 1.5rem;
+                        overflow: hidden;
+                        img{
+                          width: 100%;
+                        }
+                      }
+                      .sec3body{
+                        height: 1.8rem;
+                        width: 100%;
+                        overflow: hidden;
+                        .sec3shopnav{
+                            height: 1.8rem;
+                              width: 100%;
+
+                          ul{
+                            width: 20rem;
+                            height: 100%;
+                            height: 1.8rem;
+                            li{
+                              float: left;
+                              height: 100%;
+                              width: 1.5rem;
+                              overflow: hidden;
+                              margin-right: 0.05rem;
+                              img{
+                                width: 80%;
+                              }
+                              span{
+                                width: .5rem;
+                                display: inline-block;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .fltm{
+                    border-top: .05rem solid #efefef;
+                    .se4head{
+                      height: .4rem;
+                      width: 100%;
+                      border-bottom: 1px solid #efefef;
+                    }
+                    ul{
+                      width: 100%;
+                      li{
+                        height: 1.5rem;
+                        padding: .1rem .1rem .1rem 0;
+                        overflow: hidden;border-bottom: 1px solid #efefef;
+                        .fltmleft{
+                          float: left;
+                          width: 35%;
+                          height: 100%;
+                          img{
+                            width: 100%;
+                          }
+                        }
+                        .fltmright{
+                          width: 65%;
+                          height: 100%;
+                          float: right;
+                          .txtp{
+                            width: 100%;
+                            line-height: .2rem;
+                            height: 70%;
+                          }
+                          .pricep{
+                            height: 30%;
+                            margin-left: 0.05rem;
+                            span{
+                              display: inline-block;
+
+                            }
+                            .sm{
+                                color: #fff;
+                              text-align: center;
+                              width: 1rem;
+                              height: .2rem;
+                              background-color: $baseColor;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .rmph{
+                    *{
+                      width: 100%;
+                    }
+                    .rmphead{
+                      height: .4rem;
+                      border-bottom: 1px solid #efefef;
+                    }
+                    ul{
+
+                      li{
+                        height: 3rem;
+                        width: 100%;
+                        p{
+                          width: 100%;
+                          padding: 0 .1rem;
+                        }
+                        .pimg{
+                          height: 2rem;
+                          text-align: center;
+                          img{
+                            width: 60%;
+                          }
+                        }
+                        .xxpp{
+                          span{
+                            display: block;
+                            line-height: 0.2rem;
+                            &:nth-child(1){
+                              font-weight: bold;
+                            }
+                            &:nth-child(2){
+                              color: #999;
+                              font-size: .12rem;
+                            }
+                          }
+                        }
+                        .pprice{
+                          span{
+                            display: inline-block;
+                            float: left;
+                            width: .6rem;
+                            height: .2rem;
+                          }
+                          .rmphsm{
+                            text-align: center;
+                            float: right;
+                            background-color:#82d6f5;
+                            color: #fff;
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  .xpsj{
+                    *{
+                      width: 100%;
+                    }
+                    .xpsjhead{
+                      height: .4rem;
+                      border-bottom: 1px solid #efefef;
+                    }
+                    ul{
+                      width: 100%;
+                      overflow: hidden;
+                      li{
+                        width: 50%;
+                        padding: .1rem 0.05rem;
+                        height: 2.4rem;
+                        float: left;
+                        text-align: center;
+                        overflow: hidden;
+                        img{
+                          width: 80%;
+                        }
+                        .smm{
+                          text-align: left;
+                          span{
+                            text-align: left;
+                            display: block;
+                            width: 100%;
+                            line-height: .2rem;
+                          }
+                          .pricem{
+                            display: block;
+                            color: $baseColor;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .xpsj2{
+                    background-color: #efefef;
+                    border-top: 1px solid #efefef;
+                    border-bottom: 3px solid #efefef;
+                    *{
+                      width: 100%;
+                    }
+                    .xpsjhead{
+                      height: .5rem;
+                      border-bottom: 2px solid #efefef;
+                      width: 100%;
+                      background-color: blue;
+                      overflow: hidden;
+                    }
+                    ul{
+                      width: 100%;
+                      overflow: hidden;
+                      li{
+                        background-color: #fff;
+                        width: 50%;
+                        border-left:.02rem  solid #efefef;
+                        border-bottom: .02rem solid #efefef;
+                        padding: .1rem 0.05rem;
+                        height: 2.4rem;
+                        float: left;
+                        text-align: center;
+                        overflow: hidden;
+                        img{
+                          width: 80%;
+                        }
+                        .smm{
+                          text-align: left;
+                          span{
+                            text-align: left;
+                            display: block;
+                            width: 100%;
+                            line-height: .2rem;
+                          }
+                          .pricem{
+                            display: block;
+                            color: $baseColor;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .faxian{
+                    ul{
+                      width: 100%;
+                      padding: 0 .2rem .05rem;
+                      li{
+                        width: 100%;
+                        text-align: center;
+                        img{
+                          width: 80%;
+                        }
+                        .smm{
+                          text-align: left;
+                          span{
+                            text-align: left;
+                            display: block;
+                            width: 100%;
+                            font-size: 0.12rem;
+                            line-height: .2rem;
+                            &:nth-child(1){
+                              font-weight: bold;
+                            }
+                            &:nth-child(2){
+                              color: #999;
+                            }
+                          }
+                          .pricem{
+                            display: block;
+                            color: $baseColor;
+                            padding: .05rem 0;
+                            b{
+                              display:block;
+                              width: .6rem;
+                              height: .3rem;
+                              line-height: .3rem;
+                              &:nth-child(1){
+                                float: left;
+                              }
+                              &:nth-child(2){
+                                text-align: center;
+
+                                float: right;
+                                border: 1px solid $baseColor;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                    .cdymeizhuang{
+                      ul{
+                          width: 100%;
+                        li{
+                          height: 1rem;
+                          width: 50%;
+                          p{
+
+                            background: red;
+                            img{
+                              width: 100%;
+                            }
+                          }
+                        }
+                      }
+                    }
+
+                }
+
+
+            }
+        }
+    }
+}

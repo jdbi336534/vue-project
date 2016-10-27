@@ -1,0 +1,164 @@
+div.register-container {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+
+    header {
+        height: 50px;
+        width: 100%;
+        background: #fff;
+        @include flexbox();
+        @include flex-direction(row);
+        @include border(0 0 1px 0,#ccc);
+
+        ul {
+            width: 100%;
+            height: 100%;
+            @include flexbox();
+
+            li {
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(center);
+                height: 100%;
+
+                &:not(:nth-child(2)) {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 26px;
+                    color: #888;
+                }
+
+                &:nth-child(2) {
+                    @include flex(1);
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #333;
+                }
+            }
+        }
+    }
+
+    section {
+        width: 100%;
+
+        div.logintxt {
+            padding: 10px;
+
+            input {
+                width: 100%;
+                margin-top: 10px;
+
+                &[type="username"] {
+                    width: 90%;
+                    height: 20px;
+                    line-height: 20px;
+                    padding: 14px 0 13px 8%;
+                    border: 1px solid #c3c3c3;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    box-sizing: content-box;
+                    background-color: #fff;
+                    background-image: none;
+                }
+
+                &[type="password"] {
+                    width: 90%;
+                    height: 20px;
+                    line-height: 20px;
+                    padding: 14px 0 13px 8%;
+                    border: 1px solid #c3c3c3;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    box-sizing: content-box;
+                    background-color: #e2e2e2;
+                }
+
+                &[type="text"] {
+                    width: 40%;
+                    padding-left: 1em;
+                    height: 20px;
+                    line-height: 20px;
+                    padding: 14px 0 13px 8%;
+                    border: 1px solid #c3c3c3;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    box-sizing: content-box;
+                    background-color: #fff;
+                    background-image: none;
+                }
+
+                &.message {
+                    background-color: #e2e2e2;
+                }
+            }
+
+            img {
+                width: 25%;
+                height: 35px;
+                margin-left: 2%;
+            }
+
+            input#getCode {
+                width: 45%;
+                height: 49px;
+                line-height: 49px;
+                letter-spacing: 0;
+                color: #fff;
+                background: #f85b90;
+                border: 0 none;
+                border-radius: 5px;
+                font-size: 18px;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            div.text_wrap {
+                width: 15%;
+                display: inline-block;
+                vertical-align: middle;
+
+                span {
+                    display: block;
+                    text-align: center;
+
+                    &.again {
+                        text-decoration: underline;
+                        color: blue;
+                    }
+                }
+            }
+
+            div.protocol {
+                color: #666;
+                height: 40px;
+                line-height: 40px;
+                font-size: 15px;
+
+                a {
+                    color: #f85b90;
+                }
+
+                input#protocol {
+                    width: 14px;
+                    height: 14px;
+                    vertical-align: -2px;
+                }
+            }
+
+            input#registerBtn {
+                color: #fff;
+                background: #f85b90;
+                width: 100%;
+                height: 45px;
+                line-height: 45px;
+                border: 0 none;
+                border-radius: 5px;
+                font-size: 18px;
+                text-align: center;
+                cursor: pointer;
+                margin-top:0;
+            }
+        }
+    }
+}

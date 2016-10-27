@@ -1,0 +1,202 @@
+body > div,body > section {
+  height: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  background-color: #fff;
+}
+.cart-container{
+  height: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+    >*{
+      width: 100%;
+    }
+    header{
+      height: .44rem;
+      border-bottom: 1px solid  #ccc;
+      text-align: center;
+      line-height: .44rem;
+      font-weight: bold;
+      margin-bottom: .1rem;
+    }
+    .cartbody{
+      @include flex(1);
+      overflow: hidden;
+      width: 100%;
+      >*{
+        width: 100%;
+      }
+      .cart{
+
+         ul{
+           width: 100%;
+           >*{
+             width: 100%;
+           }
+           li{
+             >*{
+               width: 100%;
+             }
+             padding:0 0 .2rem 0;
+             height: 1.5rem;
+             border-top: 1px solid #ccc;
+             border-bottom: 1px solid #ccc;
+            .head{
+              height: .4rem;
+              border-bottom: 1px solid #ccc;
+               span:nth-child(1){
+                 width: 86%;
+                 height: .4rem;
+                 line-height: .4rem;
+                 float: left;
+                 padding-left: .1rem;
+               }
+               span:nth-child(2){
+                 width: 14%;
+                 float:right;
+                 height: .3rem;
+                margin-top: .05rem;
+                  line-height: .4rem;
+                 border-left: 1px solid #ccc;
+                 text-align: center;
+               }
+             }
+            .cartleft{
+               width: 40%;
+               height: .8rem;
+               float: left;
+               input{
+                 width: 14%;
+                 height: 100%;
+                 float: left;
+                 margin:0 .1rem;
+                 color: $baseColor;
+
+               }
+               img{
+                height: 90%;
+                overflow: hidden;
+               }
+             }
+            .cartright{
+               width: 60%;
+               height: .8rem;
+               float: right;
+               padding: .05rem .1rem;
+               .hide{
+                display: none;
+               }
+               p{
+                 width: 100%;
+                 float:left;
+               }
+               .sx{
+                 height: .2rem;
+                 overflow: hidden;
+                 span{
+                  width: .5rem;
+                  height: .2rem;
+                  float: left;
+                 }
+               }
+                .pricecart{
+                  span:nth-child(1){
+                    color:$baseColor;
+                  }
+                   span:nth-child(2){
+                     float: right;
+                     color: #ccc;
+                   }
+                }
+                .bj{
+                  height: .3rem;
+                  overflow: hidden;
+
+                  span:nth-child(1){
+                    height: .25rem;
+                    width: .77rem;
+                    display: inline-block;
+                    border:1px solid #ccc;
+                    overflow: hidden;
+                    float: left;
+                    b{
+                      display: inline-block;
+                      width: .25rem;
+                      height: .24rem;
+                      text-align: center;
+                      line-height: .24rem;
+                      float: left;
+                      &:nth-child(2){
+                        border-left: 1px solid #ccc;
+                        border-right: 1px solid #ccc;
+                      }
+                    }
+                  }
+                  span:nth-child(2){
+                    width: .6rem;
+                    height: .24rem;
+                    line-height: .2rem;
+                    border: 1px solid $baseColor;
+                    float: right;
+                    text-align: center;
+                    border-radius: .05rem;
+                  }
+
+                }
+
+             }
+           }
+         }
+         .sub{
+          border-bottom: 1px solid  #ccc;
+           width: 100%;
+           height: 1rem;
+           padding: .1rem 0 0 0;
+           .right{
+             width: 60%;
+             height: 100%;
+             float: right;
+             p{
+               text-align: right;
+               height: .3rem;
+               span{
+                 display: inline-block;
+                 padding:0 .1rem;
+               }
+             }
+           }
+         }
+         .js{
+           height: .5rem;
+           padding: .15rem;
+           span{
+             width: 60%;
+             height: 100%
+           }
+           span:nth-child(1){
+             float: left;
+             b{
+               color: $baseColor;
+             }
+           }
+           span:nth-child(2){
+             float: right;
+             width: .8rem;
+             height: .3rem;
+             text-align: center;
+             line-height: .3rem;
+             background-color: $baseColor;
+             border-radius: .05rem;
+             color: #fff;
+           }
+         }
+      }
+    }
+
+   .hide{
+     display: none !important;
+   }
+   .show{
+     display: block !important;
+   }
+}
