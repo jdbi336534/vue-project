@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">帮海贝项目</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="other">otheravcivity</string>
+    <string name="WebviewAct">test webview</string>
+    <string name="explain">此项目在webview中不能上下滑动，暂时还没有解决，还有些页面出现了点问题！由于所有的页面是由ajax加载的，所以整个页面的加载速度还是很缓慢的，抓出的包中需要用到post跨域请求，我们使用了云服务器代理的方式，我们get云服务器，云服务器post发出请求数据，收到数据后再返回给客户端，但是客户端又和云服务器出现跨域，我们给NG开通了cors跨域资源共享，所以加载速度更慢了。不过我们会抽时间解决bug的。</string>
+</resources>
